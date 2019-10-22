@@ -1,96 +1,125 @@
-# Python小測驗2.md
+# 程式閱讀題
 ```
-下列結果為何?
+1.print("3*2*(17-2)")會印出甚麼結果:D
+(A)0   (B)90  (C)出現錯誤,無法印出  (D)3*2*(17-2)
 
+2.print(3*2*(17-2))會印出甚麼結果:B
+(A)0   (B)90  (C)出現錯誤,無法印出  (D)3*2*(17-2)
 
-### Built-in numeric functions內建數值函數
+3.print("abc""+""def")會印出甚麼結果:B
+(A)出現錯誤,無法印出   (B)abc+def  (C)abc""+""def  (D)abcdef
+
+4.print("abc"+"def")會印出甚麼結果:D
+(A)出現錯誤,無法印出   (B)abc+def  (C)abc""+""def  (D)abcdef
+
+5.底下程式執行後結果為何?C
+word = "arttarataaa"
+print(word.replace("a", "z",3))
+(A)出現錯誤,無法印出   (B)arttarataaa  (C)zrttzrztaaa (D)zrttzrztzzz
+
+6.底下程式執行後結果為何?D
+word = "arttarataaa"
+print(word.replace("a", "z"))
+(A)出現錯誤,無法印出   (B)arttarataaa  (C)zrttzrztaaa (D)zrttzrztzzz
+
+7根據底下程式,下列敘述何者為非?[複選題]AB
+
+names = ['龍', '聖']
+index = 0
+
+while index < len(names):
+    name = names[index]
+    print(name)
+    index = index + 1
+    
+(A)len(names)=2  
+(B)names[1]是 龍 
+(C)程式執行完後,index最後為2
+(D)如果把條件改成 index > len(names),中index最後為2
 ```
-學習目標:熟悉常用的內建數值函數用法
-abs, divmod, float, hex, int, max, min, oct,
-pow, round
+# 程式設計題
 ```
-round(3.49)
-round(3.51)
-```
-### divmod() 函數
-```
-divmod() 函數把除數和餘數運算結果結合起來，返回一個包含商和餘數的元組(a // b, a % b)。
+for 迴圈(loop)的技巧
+1.使用for 迴圈(loop)計算1+2+3+.....100
+2.使用for 迴圈(loop)計算1+3+5+7.....+99
+3.使用for 迴圈(loop)計算1*3*5*7.....*99
 
-在 python 2.3 版本之前不允許處理複數。
-
-函數語法: divmod(a, b)
-參數說明： a: 數字 b: 數字
-
-下列結果為何?
-divmod(3,5)
-(0, 3)
-divmod(5,3)
-(1, 2)
-divmod(-5,3)
-(-2, 1)
+while 迴圈(loop)的技巧
+4.使用while 迴圈(loop)計算1+2+3+.....100
+5.使用while 迴圈(loop)計算1+3+5+7.....+99
+6.使用while 迴圈(loop計算1*3*5*7.....*99
 ```
 
-### bin()/oct()/hex() 函數
+
+# 程式設計題解答(有各種寫法,找寫最快的分數最高)
+
+### 使用for 迴圈(loop)計算1+2+3+.....100
 ```
-hex()函數用於將10進制整數轉換成16進制，以字串形式表示。
-oct()函數用於將10進制整數轉換成8進制，以字串形式表示。
-bin() 返回一個整數 int 或者長整數 long int 的二進位表示。
+sum=0
 
-
-函數語法: hex(x)
-參數說明：x -- 10進制整數
-返回值:返回16進制數，以字串形式表示。
-
-下列結果為何?
-hex(7)
-'0x7'
-hex(15)
-'0xf'
-hex(16)
-'0x10'
-hex(112)
-'0x70'
-hex(255)
-'0xff'
-hex(255.255)
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-38-9ad33ad5f233> in <module>()
-----> 1 hex(255.255)
-
-TypeError: 'float' object cannot be interpreted as an integer
-
-hex(int(255.255))
-'0xff'
-type(hex(12))
-str
-
-oct(10)
-'0o12'
-oct(112)
-'0o160'
-bin(10)
-'0b1010'
-in(112)```
-
-### int()
+for x in range(1,101):
+  sum +=x
+  
+print(sum)
 ```
-###int() 函數用於將一個字串或數位轉換為整型。
+### 使用for 迴圈(loop)計算1+3+5+7.....+99
+```
+sum=0
 
-函數語法: int(x, base=10)
-參數說明：x -- 字串或數位。     base -- 進制數，預設是十進位。
-返回值:返回整數型資料。
- 
+for x in range(1,101,2):
+  sum +=x
+  
+print(sum)
+```
+### 使用for 迴圈(loop)計算
+```
+1*3*5*7.....*99
+```
+```
+total=1
 
-下列結果為何?
-int('12')
-12
-int('12',2)
-錯誤
-int('12',8)
-10
-int('12',16)
-18
-int('12',7)
-9
+for x in range(1,101,2):
+  total *=x
+  
+print(total)
+```
+
+### 使用while 迴圈(loop)計算1+2+3+.....100
+```
+sum = 0
+x=1
+
+while x < 101:
+  sum +=x
+  x = x+1
+  # x += 1
+  
+print(sum)
+```
+### 使用while 迴圈(loop)計算1+3+5+7.....+99
+```
+sum = 0
+x=1
+
+while x < 101:
+  sum +=x
+  x = x+2
+  # x += 1
+  
+print(sum)
+```
+
+### 使用while 迴圈(loop)計算
+```
+1*3*5*7.....*99
+```
+```
+total = 1
+x=1
+
+while x < 101:
+  total *=x
+  x = x+2     # x += 2
+  
+print(total)
 ```
