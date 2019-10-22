@@ -40,20 +40,36 @@ bin() 返回一個整數 int 或者長整數 long int 的二進位表示。
 
 下列結果為何?
 hex(7)
+'0x7'
 hex(15)
+'0xf'
 hex(16)
+'0x10'
 hex(112)
+'0x70'
 hex(255)
+'0xff'
 hex(255.255)
-hex(int(255.255))
-type(hex(12))
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-68-9ad33ad5f233> in <module>()
+----> 1 hex(255.255)
 
+TypeError: 'float' object cannot be interpreted as an integer
+
+hex(int(255.255))
+'0xff'
+type(hex(12))
+str
 
 oct(10)
+'0o12'
 oct(112)
-
+'0o160'
 bin(10)
+'0b1010'
 bin(112)
+'0b1110000'
 ```
 
 ### int()
