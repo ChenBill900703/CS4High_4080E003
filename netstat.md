@@ -1,4 +1,4 @@
-...
+```
 NETSTAT [-a] [-b] [-e] [-f] [-n] [-o] [-p proto] [-r] [-s] [-x] [-t] [interval]
 
   -a            顯示所有連線和接聽連接埠。
@@ -28,4 +28,4 @@ NETSTAT [-a] [-b] [-e] [-f] [-n] [-o] [-p proto] [-r] [-s] [-x] [-t] [interval]
   interval      重新顯示選取的統計資料，每次顯示之間會暫停您在 interval 選項
                 指定的秒數。按 CTRL+C 鍵可以停止重新顯示統計資料。如果省略，
                 netstat 將會一次列印目前的設定資訊。
-...
+```
