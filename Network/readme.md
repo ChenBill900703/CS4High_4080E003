@@ -37,6 +37,7 @@ Layer-7(第七層): L7 switch, proxy
 ping 
 tracert| Traceroute
 ```
+```
 在上限 30 個躍點上
 追蹤 www.google.com.tw [172.217.27.131] 的路由:
 
