@@ -208,3 +208,9 @@ C:\WINDOWS\system32>arp -a
   224.0.0.252           01-00-5e-00-00-fc     靜態
   239.255.255.250       01-00-5e-7f-ff-fa     靜態
   ```
+# Transport(傳輸)層協定:TCP(可靠的reliable) vs UDP (不可靠的unreliable)
+```
+何謂(可靠的reliable) vs (不可靠的unreliable)?
+都(不可靠的unreliable)了,為何要用??
+如何達到(可靠的reliable)?<----封包格式的設計
+```
