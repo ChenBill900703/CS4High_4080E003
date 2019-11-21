@@ -74,3 +74,16 @@ tracert| Traceroute
 
 追蹤完成。
 ```
+
+```
+C:\WINDOWS\system32>tracert www.ksu.edu.tw
+
+在上限 30 個躍點上
+追蹤 www.ksu.edu.tw [120.114.100.65] 的路由:
+
+  1    <1 ms    <1 ms    <1 ms  172.20.155.254
+  2    <1 ms    <1 ms    <1 ms  120-114-50-230.ksu.edu.tw [120.114.50.230]
+  3    <1 ms    <1 ms    <1 ms  chs.www.ksu.edu.tw [120.114.100.65]
+
+追蹤完成。
+```
